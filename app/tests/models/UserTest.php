@@ -36,15 +36,6 @@ class UserTest extends TestCase
 			array(array('email' => 'lorem@ipsum.com', 'password' => 'loremipsumdolor'))
 		);
 	}
-
-	public function userWithInvalidEmailDP()
-	{
-		return array(
-			array(array('name' => 'lorem ipsum dolor', 'email' => '', 'password' => 'loremipsumdolor')),
-			array(array('name' => 'lorem ipsum dolor', 'email' => '.@..com', 'password' => 'loremipsumdolor')),
-			array(array('name' => 'lorem ipsum dolor', 'password' => 'loremipsumdolor'))
-		);
-	}
 	/**
 	 * @dataProvider userWithInvalidEmailDP
 	 */
@@ -52,6 +43,14 @@ class UserTest extends TestCase
 	{
 		$validation = $this->model->validate($user);
 		$this->assertTrue($validation->fails());
+	}
+	public function userWithInvalidEmailDP()
+	{
+		return array(
+			array(array('name' => 'lorem ipsum dolor', 'email' => '', 'password' => 'loremipsumdolor')),
+			array(array('name' => 'lorem ipsum dolor', 'email' => '.@..com', 'password' => 'loremipsumdolor')),
+			array(array('name' => 'lorem ipsum dolor', 'password' => 'loremipsumdolor'))
+		);
 	}
 	/**
 	 * @dataProvider userWithInvalidPasswordDP
