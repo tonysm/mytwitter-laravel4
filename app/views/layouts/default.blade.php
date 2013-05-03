@@ -24,7 +24,7 @@
 								<a href="#">MyTwitter</a>
 							</li>
 							<li>
-								<a href="#">Messages</a>
+								<a href="#login">Login</a>
 							</li>
 						</ul>
 					</div><!--/.nav-collapse -->
