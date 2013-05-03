@@ -4,9 +4,8 @@ php:
   - 5.4
 
 before_script:
-  - composer install --dev
-  - composer install --dev
-  - composer install --dev
+  - wget http://getcomposer.org/composer.phar
+  - php composer.phar install --dev
 
 script:
   - phpunit
