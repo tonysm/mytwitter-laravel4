@@ -41,7 +41,8 @@ class UserTest extends TestCase
 	{
 		return array(
 			array(array('name' => 'lorem ipsum dolor', 'email' => '', 'password' => 'loremipsumdolor')),
-			array(array('name' => 'lorem ipsum dolor', 'email' => '.@..com', 'password' => 'loremipsumdolor'))
+			array(array('name' => 'lorem ipsum dolor', 'email' => '.@..com', 'password' => 'loremipsumdolor')),
+			array(array('name' => 'lorem ipsum dolor', 'password' => 'loremipsumdolor'))
 		);
 	}
 	/**
@@ -50,7 +51,23 @@ class UserTest extends TestCase
 	public function testUserFailsToSaveWhenEmailIsEmpty($user)
 	{
 		$validation = $this->model->validate($user);
-
 		$this->assertTrue($validation->fails());
+	}
+	/**
+	 * @dataProvider userWithInvalidPasswordDP
+	 */
+	public function testUserFailsToSaveWhenPasswordIsEmpty($user)
+	{
+		$validation = $this->model->validate($user);
+		$this->assertTrue($validation->fails());
+	}
+
+	public function userWithInvalidPasswordDP()
+	{
+		return array(
+			array(array('name' => 'lorem ipsum dolor', 'email' => 'lorem@ipsum.com', 'password' => '')),
+			array(array('name' => 'lorem ipsum dolor', 'email' => 'lorem@ipsum.com', 'password' => null)),
+			array(array('name' => 'lorem ipsum dolor', 'email' => 'lorem@ipsum.com'))
+		);
 	}
 }

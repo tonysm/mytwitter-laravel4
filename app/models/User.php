@@ -8,7 +8,8 @@ class User extends Eloquent
 {
 	public static $rules = array(
 		'name' => 'required|min:10|max:150',
-		'email' => 'required|email|unique:users'
+		'email' => 'required|email|unique:users',
+		'password' => 'required'
 	);
 
 	public function validate(array $data)
