@@ -5,6 +5,8 @@ php:
 
 before_script:
   - composer install --dev
+  - composer install --dev
+  - composer install --dev
 
 script:
   - phpunit
