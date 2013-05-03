@@ -17,13 +17,5 @@ class UsersController extends BaseController
 	public function create()
 	{
 		$user = $this->user->store(Input::all());
-
-		if ($user) {
-			return \Redirect::to('users')
-				->with('message', 'Mother Fucker');
-		}
-
-		return \Redirect::to('/')
-				->with('message', 'Mother Fucker');
 	}
 }
