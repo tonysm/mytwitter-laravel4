@@ -1,6 +1,6 @@
 global:
   env:
-    - LARAVEL_ENV: stage
+    - LARAVEL_ENV: production
 
 web1:
   document_root: public
