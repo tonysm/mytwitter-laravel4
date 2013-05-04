@@ -24,3 +24,7 @@ web1:
     - "rm -f app/storage/views/*"
   before_deploy:
     - "php artisan migrate"
+
+db1:
+  name: mytwitter-stage
+  type: mysql
