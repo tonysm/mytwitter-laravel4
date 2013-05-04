@@ -24,7 +24,7 @@
 								<a href="#">MyTwitter</a>
 							</li>
 							<li>
-								<a href="#login">Login</a>
+								<a href="#loginmodal" role="button" data-toggle="modal">Login</a>
 							</li>
 						</ul>
 					</div><!--/.nav-collapse -->
@@ -42,5 +42,9 @@
 			</p>
 		</div>
 	</footer>
+
+	{{ Html::script('js/jquery.min.js') }}
+	{{ Html::script('js/bootstrap.min.js') }}
+	@yield('scripts')
 </body>
 </html>
