@@ -3,18 +3,19 @@
 @section('content')
 	<div class="modal hide fade" id="loginmodal">
 		{{ Form::open(array('url' => 'login', 'method' => 'POST', 'style' => 'padding: 0; margin: 0;')) }}
+		{{ Form::token() }}
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-			<h3>Modal header</h3>
+			<h3>Sign in</h3>
 		</div>
 		<div class="modal-body">
 			{{ Form::label('username', 'Username') }}
-			{{ Form::text('username', null, array('class' => 'span4', 'placeholder' => 'johndoe')) }}
+			{{ Form::text('username', '', array('class' => 'span4', 'placeholder' => 'johndoe')) }}
 			{{ Form::label('password', 'Password') }}
 			{{ Form::password('password', array('class' => 'span4', 'placeholder' => '******')) }}
 		</div>
 		<div class="modal-footer">
-			{{ Html::link('#', 'Close', array('role' => 'button', 'class' => 'btn', 'data-toggle' => 'modal')) }}
+			{{ Html::link('#loginmodal', 'Close', array('role' => 'button', 'class' => 'btn', 'data-toggle' => 'modal')) }}
 			{{ Form::submit('Logar', array('class' => 'btn btn-primary')) }}
 		</div>
 		{{ Form::close() }}
@@ -33,13 +34,7 @@
 		@endif
 		<div class="span7">
 			<h3>Welcome to MyTwitter!</h3>
-			<p>Oops, it seems you have made some mistakes.</p>
-			<ul>
-				{{ $errors->first('username', '<li>:message</li>') }}
-				{{ $errors->first('email', '<li>:message</li>') }}
-				{{ $errors->first('password', '<li>:message</li>') }}
-				{{ $errors->first('password_confirmation', '<li>:message</li>') }}
-			</ul>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, nihil, similique, laborum sunt explicabo quas repudiandae enim deleniti dolores suscipit reiciendis blanditiis non molestiae quae quis. Consectetur accusantium ex dignissimos!</p>
 		</div>
 
 		<div class="span4 offset1">

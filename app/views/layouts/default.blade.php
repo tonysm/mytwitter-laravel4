@@ -21,10 +21,10 @@
 					<div class="nav-collapse collapse">
 						<ul class="nav">
 							<li>
-								<a href="#">MyTwitter</a>
+								{{ Html::link('/', 'MyTwitter') }}
 							</li>
 							<li>
-								<a href="#loginmodal" role="button" data-toggle="modal">Login</a>
+								<a href="#loginmodal" role="button" data-toggle="modal">Sign in</a>
 							</li>
 						</ul>
 					</div><!--/.nav-collapse -->

@@ -14,7 +14,7 @@ class UsersController extends BaseController
 		$user->password_confirmation = Input::get('password_confirmation');
 
 		if ($user->save()) {
-			Auth::attempt(array('username' => $user->username, 'password' => Input::get('password')));
+			Auth::login($user);
 			return Redirect::route('userhome')
 				->with('message', 'Thanks for registering!');
 		} else {
@@ -23,8 +23,29 @@ class UsersController extends BaseController
 		}
 	}
 
+	public function doLogin()
+	{
+		$data = array(
+			'username' => Input::get('username'),
+			'password' => Input::get('password')
+		);
+
+		if (Auth::attempt($data)) {
+			return Redirect::route('userhome')
+				->with('message', 'Welcome back!');
+		} else {
+			return $this->login()
+				->with('loginerrors', 'Wrong username or password!');
+		}
+	}
+
+	public function login()
+	{
+		return View::make('users.login');
+	}
+
 	public function index()
 	{
-		return 'hello user!';
+		return "Hello user " . Auth::user()->username;
 	}
 }
