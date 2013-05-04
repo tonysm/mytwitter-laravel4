@@ -20,8 +20,7 @@
 - Added `url` option to configuration for use by the Artisan CLI.
 - `dropColumn` now supports dynamic argument lists.
 - Pass `route` and `request` to Closure based controller before filters.
-- Added `Auth::basicStateless` method for easier API integration with basic auth.
-- Renamed `Auth::stateless` and `Auth::basicStateless` to `Auth::once` and `Auth::onceBasic`.
+- Added `Auth::onceBasic` method for easier API integration with basic auth.
 - Added named view implementation which was in Laravel 3.
 - Migrated entire session back-end to Symfony HttpFoundation Session. New `native` driver. All drivers are available and work the same. New sessions will not be backwards compatible after updating.
 - Renamed `Session::getToken` to `Session::token`.
@@ -70,6 +69,8 @@
 - Added support for `union` statements in query builder.
 - Added ability to add more conditions on `exists` validation rule.
 - Added support for maintenance mode via `php artisan down` and `php artisan up`.
+- Added "soft delete" support to Eloquent via new "softDelete" property. `restore` method added to "un-delete".
+- Added `trashed` method to Eloquent model and `trashed` to Eloquent builder.
 
 ## Beta 4
 

@@ -1,8 +1,14 @@
 <?php
 
-App::bind('Repositories\UserRepositoryInterface', 'Repositories\EloquentUserRepository');
-
 Route::get('/', 'HomeController@index');
-Route::get('users', 'UsersController@index');
+Route::get('users', array(
+	'before' => 'auth',
+	'as' => 'userhome',
+	'uses' => 'UsersController@index'
+));
 
-Route::post('users', array('as' => 'adduser', 'uses' => 'UsersController@create'));
+Route::post('users', array(
+	'before' => 'csrf',
+	'as' => 'adduser',
+	'uses' => 'UsersController@create'
+));

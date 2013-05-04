@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "e64d194f56432613787d8b9b34746676",
+    "hash": "64da55915f07f6b93795c159a49c87e9",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -616,17 +616,52 @@
             "time": "2013-04-30 19:58:08"
         },
         {
+            "name": "j20/php-uuid",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/j20/php-uuid.git",
+                "reference": "c686320f8c6104a5ded60b622a89bfd4eb9f4021"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/j20/php-uuid/zipball/c686320f8c6104a5ded60b622a89bfd4eb9f4021",
+                "reference": "c686320f8c6104a5ded60b622a89bfd4eb9f4021",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "J20\\Uuid": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Generate a UUID v4 with PHP.",
+            "keywords": [
+                "guid",
+                "token",
+                "uuid"
+            ],
+            "time": "2013-04-03 18:44:02"
+        },
+        {
             "name": "laravel/framework",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "a678268ff6cbb41160fc89d477b8e1e0e596bd39"
+                "reference": "309f5c93e98f2401a8f0e9e9079f7832607fb99a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/a678268ff6cbb41160fc89d477b8e1e0e596bd39",
-                "reference": "a678268ff6cbb41160fc89d477b8e1e0e596bd39",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/309f5c93e98f2401a8f0e9e9079f7832607fb99a",
+                "reference": "309f5c93e98f2401a8f0e9e9079f7832607fb99a",
                 "shasum": ""
             },
             "require": {
@@ -723,7 +758,57 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2013-05-02 20:31:06"
+            "time": "2013-05-03 22:22:05"
+        },
+        {
+            "name": "laravelbook/ardent",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravelbook/ardent.git",
+                "reference": "1a778d2e1aec7e5e7922ab94eefd4af5fa3d5b56"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravelbook/ardent/zipball/1a778d2e1aec7e5e7922ab94eefd4af5fa3d5b56",
+                "reference": "1a778d2e1aec7e5e7922ab94eefd4af5fa3d5b56",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "4.0.x",
+                "illuminate/support": "4.0.x",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "LaravelBook\\Ardent": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Max Ehsan",
+                    "email": "contact@laravelbook.com",
+                    "homepage": "http://laravelbook.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Self-validating smart models for Laravel 4's Eloquent O/RM",
+            "homepage": "http://laravelbook.com/",
+            "keywords": [
+                "database",
+                "eloquent",
+                "framework",
+                "laravel",
+                "orm",
+                "sql",
+                "validation"
+            ],
+            "time": "2013-04-24 07:06:08"
         },
         {
             "name": "monolog/monolog",
@@ -731,12 +816,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "b264026cba83b4f02ebea7d908a6340a9fd010ac"
+                "reference": "1eed379a3b7c31f698e49fa7a822a536e94c31f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/b264026cba83b4f02ebea7d908a6340a9fd010ac",
-                "reference": "b264026cba83b4f02ebea7d908a6340a9fd010ac",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1eed379a3b7c31f698e49fa7a822a536e94c31f5",
+                "reference": "1eed379a3b7c31f698e49fa7a822a536e94c31f5",
                 "shasum": ""
             },
             "require": {
@@ -785,7 +870,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2013-04-24 15:45:58"
+            "time": "2013-05-03 09:05:12"
         },
         {
             "name": "nesbot/carbon",
@@ -1698,12 +1783,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Translation.git",
-                "reference": "v2.3.0-BETA1"
+                "reference": "b41dd296a377417710e944b1d94e7e3d132a19ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Translation/zipball/v2.3.0-BETA1",
-                "reference": "v2.3.0-BETA1",
+                "url": "https://api.github.com/repos/symfony/Translation/zipball/b41dd296a377417710e944b1d94e7e3d132a19ac",
+                "reference": "b41dd296a377417710e944b1d94e7e3d132a19ac",
                 "shasum": ""
             },
             "require": {
@@ -1744,7 +1829,63 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "http://symfony.com",
-            "time": "2013-04-30 17:05:37"
+            "time": "2013-05-03 06:41:16"
+        },
+        {
+            "name": "zizaco/confide",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Zizaco/confide.git",
+                "reference": "5e752212c00d445c170b8508f6436d0a63f2a6e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Zizaco/confide/zipball/5e752212c00d445c170b8508f6436d0a63f2a6e3",
+                "reference": "5e752212c00d445c170b8508f6436d0a63f2a6e3",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "4.0.x",
+                "j20/php-uuid": "*",
+                "laravelbook/ardent": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "illuminate/auth": "4.0.x",
+                "illuminate/database": "4.0.x",
+                "mockery/mockery": "0.7.2"
+            },
+            "suggest": {
+                "zizaco/entrust": "add Role-based Permissions to Laravel 4"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/migrations",
+                    "src/commands"
+                ],
+                "psr-0": {
+                    "Zizaco\\Confide": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zizaco Zizuini",
+                    "email": "zizaco@gmail.com"
+                }
+            ],
+            "description": "Confide is an authentication solution for Laravel 4",
+            "keywords": [
+                "auth",
+                "illuminate",
+                "laravel"
+            ],
+            "time": "2013-04-03 07:27:37"
         }
     ],
     "packages-dev": [
@@ -1891,6 +2032,47 @@
                 }
             ],
             "time": "2013-05-02 15:48:16"
+        },
+        {
+            "name": "zizaco/factory-muff",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Zizaco/factory-muff.git",
+                "reference": "8355ab57421b7f02a4973a991fd3128122b7f40c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Zizaco/factory-muff/zipball/8355ab57421b7f02a4973a991fd3128122b7f40c",
+                "reference": "8355ab57421b7f02a4973a991fd3128122b7f40c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Zizaco\\FactoryMuff": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zizaco Zizuini",
+                    "email": "zizaco@gmail.com"
+                }
+            ],
+            "description": "The goal of this Package is to enable the rapid creation of objects for the purpose of testing.",
+            "keywords": [
+                "factory",
+                "laravel",
+                "testing"
+            ],
+            "time": "2013-04-29 16:01:24"
         }
     ],
     "aliases": [
@@ -1898,8 +2080,11 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
+        "laravelbook/ardent": 20,
+        "zizaco/confide": 20,
         "way/generators": 20,
-        "mockery/mockery": 20
+        "mockery/mockery": 20,
+        "zizaco/factory-muff": 20
     },
     "platform": [
 

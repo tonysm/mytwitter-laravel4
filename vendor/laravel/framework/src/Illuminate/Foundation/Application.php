@@ -7,6 +7,7 @@ use Illuminate\Routing\Route;
 use Illuminate\Routing\Router;
 use Illuminate\Container\Container;
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Events\EventServiceProvider;
 use Illuminate\Routing\RoutingServiceProvider;
@@ -504,7 +505,7 @@ class Application extends Container implements HttpKernelInterface {
 		{
 			$response = $this['events']->until('illuminate.app.down');
 
-			return $this->prepareResponse($response, $this['request']);
+			return $this->prepareResponse($response, $request);
 		}
 		else
 		{
@@ -527,6 +528,8 @@ class Application extends Container implements HttpKernelInterface {
 	public function handle(SymfonyRequest $request, $type = HttpKernelInterface::MASTER_REQUEST, $catch = true)
 	{
 		$this['request'] = $request;
+
+		Facade::clearResolvedInstance('request');
 
 		return $this->dispatch($request);
 	}

@@ -2,21 +2,29 @@
 
 class UsersControllerTest extends TestCase
 {
-	public function testAddUserRequest()
+	public function testRedirectsUserToUsersIndexAfterSaving()
 	{
-		$mock = Mockery::mock('Repositories\UserRepositoryInterface');
-		$mock->shouldReceive('store')
-			->once()
-			->andReturn(true);
-
-		$this->app->instance('Repositories\UserRepositoryInterface', $mock);
-
-		$request = $this->call('POST', '/users', array(
-			'name' => 'luiz',
-			'email' => 'fulano@test.com',
-			'password' => '123'
+		$this->call('POST', 'users', array(
+			'username' => 'loremipsum',
+			'email' => 'lorem@ipsum.com',
+			'password' => '123456',
+			'password_confirmation' => '123456',
+			'token' => Session::token()
 		));
 
-		$this->assertTrue($request->isOk());
+		$this->assertRedirectedToRoute('userhome');
+	}
+
+	public function testRedirectsBackToHomeAfterSavesFails()
+	{
+		$this->call('POST', 'users', array(
+			'username' => 'loremipsum',
+			'email' => 'lorem@ipsum.com',
+			'password' => '123',
+			'password_confirmation' => '123',
+			'token' => Session::token()
+		));
+
+		$this->assertRedirectedTo('/');
 	}
 }

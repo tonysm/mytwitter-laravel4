@@ -1,19 +1,19 @@
 <?php
 namespace Models;
 
-use Eloquent,
-	Validator;
+use Zizaco\Confide\ConfideUser;
 
-class User extends Eloquent
+class User extends ConfideUser
 {
 	public static $rules = array(
-		'name' => 'required|min:10|max:150',
+		'username' => 'required|unique:users',
 		'email' => 'required|email|unique:users',
-		'password' => 'required'
+		'password' => 'required|min:6|confirmed'
 	);
-
-	public function validate(array $data)
-	{
-		return Validator::make($data, self::$rules);
-	}
+	public static $factory = array(
+		'username' => 'string',
+		'email' => 'email',
+		'password' => '123456789',
+		'password_confirmation' => '123456789'
+	);
 }

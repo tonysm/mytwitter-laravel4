@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Zizaco\\FactoryMuff' => $vendorDir . '/zizaco/factory-muff/src',
+    'Zizaco\\Confide' => $vendorDir . '/zizaco/confide/src',
     'Whoops' => $vendorDir . '/filp/whoops/src',
     'Way\\Generators' => $vendorDir . '/way/generators/src',
     'Symfony\\Component\\Translation\\' => $vendorDir . '/symfony/translation',
@@ -29,6 +31,8 @@ return array(
     'Mustache' => $vendorDir . '/mustache/mustache/src',
     'Monolog' => $vendorDir . '/monolog/monolog/src',
     'Mockery' => $vendorDir . '/mockery/mockery/library',
+    'LaravelBook\\Ardent' => $vendorDir . '/laravelbook/ardent/src',
+    'J20\\Uuid' => $vendorDir . '/j20/php-uuid/src',
     'Illuminate' => $vendorDir . '/laravel/framework/src',
     'Doctrine\\DBAL\\' => $vendorDir . '/doctrine/dbal/lib',
     'Doctrine\\Common\\Lexer\\' => $vendorDir . '/doctrine/lexer/lib',
