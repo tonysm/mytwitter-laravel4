@@ -23,9 +23,15 @@
 							<li>
 								{{ Html::link('/', 'MyTwitter') }}
 							</li>
+							@if(!Auth::check())
 							<li>
 								<a href="#loginmodal" role="button" data-toggle="modal">Sign in</a>
 							</li>
+							@else
+							<li>
+								{{ Html::linkRoute('findusers', 'Connect') }}
+							</li>
+							@endif
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
