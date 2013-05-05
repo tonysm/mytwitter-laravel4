@@ -1,6 +1,7 @@
 <?php
 
-use Models\User;
+use Models\User,
+	Models\Friend;
 
 class UsersController extends BaseController
 {
@@ -46,6 +47,30 @@ class UsersController extends BaseController
 
 	public function index()
 	{
-		return "Hello user " . Auth::user()->username;
+		return View::make('users.index');
+	}
+
+	public function findUsers()
+	{
+		$username = Input::get('username');
+
+		if (isset($username) && !empty($username)) {
+			$users =  User::where('username', 'like', "%{$username}%")
+							->where('id', "!=", Auth::user()->id)
+							->get();
+			$friends = Auth::user()->friends()->get();
+			$friends_id = array();
+			foreach ($friends as $f) {
+				$friends_id[] = $f->friend_id;
+			}
+			
+		} else {
+			$users = null;
+			$friends = array();
+		}
+
+		return View::make('users.find')
+			->with('users', $users)
+			->with('friends_id', $friends_id);
 	}
 }
