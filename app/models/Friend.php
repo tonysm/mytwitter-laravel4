@@ -7,6 +7,11 @@ class Friend extends Ardent
 {
 	public $table = "friends";
 
+	public static $factory = array(
+		'user_id' => 'factory|Models\User',
+		'friend_id' => 'factory|Models\User'
+	);
+
 	public function user() {
 		return $this->belongsTo('Models\User');
 	}
