@@ -17,6 +17,9 @@ class HomeController extends BaseController {
 
 	public function index()
 	{
+		if (Auth::check()) {
+			return Redirect::route('userhome');
+		}
 		return View::make('home.index');
 	}
 
