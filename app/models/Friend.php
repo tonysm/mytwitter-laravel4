@@ -12,7 +12,13 @@ class Friend extends Ardent
 		'friend_id' => 'factory|Models\User'
 	);
 
-	public function user() {
+	public function user()
+	{
 		return $this->belongsTo('Models\User');
+	}
+
+	public function friend()
+	{
+		return $this->belongsTo('Models\User', 'friend_id');
 	}
 }

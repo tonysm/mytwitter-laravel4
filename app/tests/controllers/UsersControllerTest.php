@@ -67,4 +67,29 @@ class UsersControllerTest extends TestCase
 
 		$this->assertRedirectedToRoute('userhome');
 	}
+
+	public function testUserFindUsers()
+	{
+		$friend = FactoryMuff::create('Models\Friend');
+
+		Auth::login($friend->user);
+		$response = $this->call('GET', 'users/find');
+
+		$this->assertTrue($response->isOk());
+	}
+
+	public function testUsersCanFindFriends()
+	{
+		$friend = FactoryMuff::create('Models\Friend');
+		Auth::login($friend->user);
+
+		$response = $this->call('POST', 'users/find', array(
+			'username' => $friend->friend->username,
+			'token' => Session::token()
+		));
+
+		$this->assertViewHas('users');
+		$this->assertViewHas('friends_id');
+		$this->assertTrue($response->isOk());
+	}
 }

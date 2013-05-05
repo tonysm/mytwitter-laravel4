@@ -66,7 +66,7 @@ class UsersController extends BaseController
 			
 		} else {
 			$users = null;
-			$friends = array();
+			$friends_id = array();
 		}
 
 		return View::make('users.find')
