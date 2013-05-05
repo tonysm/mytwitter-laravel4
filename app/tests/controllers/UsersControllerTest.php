@@ -1,5 +1,7 @@
 <?php
 
+use Zizaco\FactoryMuff\Facade\FactoryMuff;
+
 class UsersControllerTest extends TestCase
 {
 	public function testRedirectsUserToUsersIndexAfterSaving()
@@ -55,5 +57,14 @@ class UsersControllerTest extends TestCase
 
 		$this->assertViewHas('loginerrors');
 		$this->assertNull(Auth::user());
+	}
+
+	public function testLoggedUserIsRedirectedToUserHomeWhenAccessingAppHome()
+	{
+		$user = FactoryMuff::create('Models\User');
+		Auth::login($user);
+		$this->call('GET', '/');
+
+		$this->assertRedirectedToRoute('userhome');
 	}
 }
