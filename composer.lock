@@ -129,12 +129,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "b5716ea776f349a0fedcf0e7d032386c1f696f76"
+                "reference": "4116eff37635219101a22c9732f409633eb07c5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/b5716ea776f349a0fedcf0e7d032386c1f696f76",
-                "reference": "b5716ea776f349a0fedcf0e7d032386c1f696f76",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/4116eff37635219101a22c9732f409633eb07c5d",
+                "reference": "4116eff37635219101a22c9732f409633eb07c5d",
                 "shasum": ""
             },
             "require": {
@@ -187,7 +187,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2013-03-17 13:59:02"
+            "time": "2013-05-04 23:23:40"
         },
         {
             "name": "doctrine/collections",
@@ -336,12 +336,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "1d8d6bcfec388e17480b2c8953820b7c3e6d0850"
+                "reference": "873b952c416b2d316ecb1e052f822d57390ac296"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/1d8d6bcfec388e17480b2c8953820b7c3e6d0850",
-                "reference": "1d8d6bcfec388e17480b2c8953820b7c3e6d0850",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/873b952c416b2d316ecb1e052f822d57390ac296",
+                "reference": "873b952c416b2d316ecb1e052f822d57390ac296",
                 "shasum": ""
             },
             "require": {
@@ -398,7 +398,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2013-05-01 17:26:25"
+            "time": "2013-05-04 11:57:47"
         },
         {
             "name": "doctrine/inflector",
@@ -656,12 +656,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "309f5c93e98f2401a8f0e9e9079f7832607fb99a"
+                "reference": "1d4ec226f08559693fff3a26a2aaf00184a90faf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/309f5c93e98f2401a8f0e9e9079f7832607fb99a",
-                "reference": "309f5c93e98f2401a8f0e9e9079f7832607fb99a",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/1d4ec226f08559693fff3a26a2aaf00184a90faf",
+                "reference": "1d4ec226f08559693fff3a26a2aaf00184a90faf",
                 "shasum": ""
             },
             "require": {
@@ -758,7 +758,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2013-05-03 22:22:05"
+            "time": "2013-05-05 18:06:52"
         },
         {
             "name": "laravelbook/ardent",
@@ -1091,16 +1091,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "dev-master",
+            "version": "v5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "a64528efec37173a6dabaedb0e678beffdb446f0"
+                "reference": "v5.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/a64528efec37173a6dabaedb0e678beffdb446f0",
-                "reference": "a64528efec37173a6dabaedb0e678beffdb446f0",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/v5.0.0",
+                "reference": "v5.0.0",
                 "shasum": ""
             },
             "require": {
@@ -1136,7 +1136,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2013-04-30 17:36:15"
+            "time": "2013-04-30 17:35:30"
         },
         {
             "name": "symfony/browser-kit",
@@ -1837,12 +1837,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Zizaco/confide.git",
-                "reference": "5e752212c00d445c170b8508f6436d0a63f2a6e3"
+                "reference": "3afb5df1bc25e2644ec0084aa681e7a360381bb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Zizaco/confide/zipball/5e752212c00d445c170b8508f6436d0a63f2a6e3",
-                "reference": "5e752212c00d445c170b8508f6436d0a63f2a6e3",
+                "url": "https://api.github.com/repos/Zizaco/confide/zipball/3afb5df1bc25e2644ec0084aa681e7a360381bb6",
+                "reference": "3afb5df1bc25e2644ec0084aa681e7a360381bb6",
                 "shasum": ""
             },
             "require": {
@@ -1885,7 +1885,7 @@
                 "illuminate",
                 "laravel"
             ],
-            "time": "2013-04-03 07:27:37"
+            "time": "2013-05-05 18:02:17"
         }
     ],
     "packages-dev": [
@@ -1990,12 +1990,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JeffreyWay/Laravel-4-Generators.git",
-                "reference": "ec2b4507759548343fdea1a03257777790271253"
+                "reference": "b5cbc4f8d1174dbd90b94bd160a31633a26ccea5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JeffreyWay/Laravel-4-Generators/zipball/ec2b4507759548343fdea1a03257777790271253",
-                "reference": "ec2b4507759548343fdea1a03257777790271253",
+                "url": "https://api.github.com/repos/JeffreyWay/Laravel-4-Generators/zipball/b5cbc4f8d1174dbd90b94bd160a31633a26ccea5",
+                "reference": "b5cbc4f8d1174dbd90b94bd160a31633a26ccea5",
                 "shasum": ""
             },
             "require": {
@@ -2031,7 +2031,7 @@
                     "role": "Developer"
                 }
             ],
-            "time": "2013-05-02 15:48:16"
+            "time": "2013-05-05 13:54:21"
         },
         {
             "name": "zizaco/factory-muff",

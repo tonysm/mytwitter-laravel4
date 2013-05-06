@@ -2,6 +2,7 @@
 
 use Illuminate\View\Environment;
 use Illuminate\Config\Repository;
+use InvalidArgumentException;
 use Zizaco\Confide\ObjectProvider;
 
 class Confide
@@ -263,6 +264,23 @@ class Confide
     public function makeResetPasswordForm( $token )
     {
         return $this->app['view']->make( $this->app['config']->get('confide::reset_password_form') , array('token'=>$token));
+    }
+
+    /**
+     * Check whether the controller's action exists.
+     * Returns the url if it does. Otherwise false.
+     * @param $controllerAction
+     * @return string
+     */
+    public function checkAction( $action, $parameters = array(), $absolute = true )
+    {
+        try {
+            $url = $this->app['url']->action($action, $parameters, $absolute);
+        } catch( InvalidArgumentException $e ) {
+            return false;
+        }
+
+        return $url;
     }
 
     /**
