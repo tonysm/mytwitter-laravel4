@@ -10,7 +10,7 @@ setup:
 test:
     php_mess_detector:
         allow_failures: true
-        ignore: 
+        exclude: 
             - "app/config"
             - "app/database"
     php_code_sniffer:
