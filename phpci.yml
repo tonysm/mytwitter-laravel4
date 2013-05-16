@@ -10,6 +10,9 @@ setup:
 test:
     php_mess_detector:
         allow_failures: true
+        ignore: 
+            - "app/config"
+            - "app/database"
     php_code_sniffer:
         standard: "PSR0"
     php_cpd:
