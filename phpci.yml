@@ -2,6 +2,8 @@ build_settings:
     ignore:
         - "vendor"
         - "tests"
+        - "app/config"
+        - "app/database"
 
 setup:
     composer:
@@ -10,9 +12,6 @@ setup:
 test:
     php_mess_detector:
         allow_failures: true
-        exclude: 
-            - "app/config"
-            - "app/database"
     php_code_sniffer:
         standard: "PSR0"
     php_cpd:
