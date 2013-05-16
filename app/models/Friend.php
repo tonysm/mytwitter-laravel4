@@ -17,7 +17,7 @@ class Friend extends Ardent
 		return $this->belongsTo('Models\User');
 	}
 
-	public function friend()
+	public function user_friend()
 	{
 		return $this->belongsTo('Models\User', 'friend_id');
 	}

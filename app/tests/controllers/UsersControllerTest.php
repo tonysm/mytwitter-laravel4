@@ -84,7 +84,7 @@ class UsersControllerTest extends TestCase
 		Auth::login($friend->user);
 
 		$response = $this->call('POST', 'users/find', array(
-			'username' => $friend->friend->username,
+			'username' => $friend->user_friend->username,
 			'token' => Session::token()
 		));
 
