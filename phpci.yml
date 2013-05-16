@@ -13,6 +13,6 @@ test:
     php_mess_detector:
         allow_failures: true
     php_code_sniffer:
-        standard: "PSR2"
+        standard: "PHPCS"
     php_cpd:
         allow_failures: true
