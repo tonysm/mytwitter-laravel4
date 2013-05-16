@@ -16,11 +16,3 @@ test:
         allow_failures: true
     php_unit:
         allow_failures: true
-    php_code_sniffer:
-        standard: "PSR1"
-        settings:
-            ignore:
-                - "app/controllers"
-                - "bootstrap"
-                - "public"
-                - "vendor"
