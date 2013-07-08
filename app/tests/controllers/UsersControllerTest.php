@@ -17,11 +17,6 @@ class UsersControllerTest extends TestCase
 		$this->assertRedirectedToRoute('userhome');
 	}
 
-	public function testFails()
-	{
-		$this->assertFalse(true);
-	}
-
 	public function testRedirectsBackToHomeAfterSavesFails()
 	{
 		$this->call('POST', 'users', array(
